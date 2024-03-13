@@ -33,7 +33,7 @@ function onFormSubmit(e) {
   descText.innerHTML = `You are <strong>${desc}</strong>`;
 }
 
-//proses kondisional dalam menetukan nilai
+//proses kondisional dalam menetukan nilai BMI
 function interpretBMI(bmi) {
   if (bmi < 18.5) {
     return "underweight";
