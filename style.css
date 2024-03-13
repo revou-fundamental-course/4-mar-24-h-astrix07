@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap");
-
+/*indikator untuk hasil*/
 :root {
   --underweight: orange;
   --normal: green;
@@ -7,6 +7,31 @@
   --obese: crimson;
 }
 
+/*animasi header*/
+h1 {
+  overflow: hidden; 
+  border-right: .15em solid rgb(47, 213, 255); 
+  white-space: nowrap; 
+  margin: 0 auto;
+  letter-spacing: .15em; 
+  animation: 
+    typing 3.5s steps(25, end),
+    blink-caret .75s step-end infinite;
+}
+
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #3fd9ff; }
+} 
+
+/*Mengubah style kalkulator*/
 * {
   box-sizing: border-box;
   padding: 0;
@@ -15,12 +40,12 @@
 }
 
 body {
-  background: #004d4d;
+  background: linear-gradient(196deg, rgba(9,214,255,1) 0%, rgba(42,127,186,1) 51%, rgba(2,0,36,1) 94%);
   display: grid;
   place-items: center;
   height: 100vh;
 }
-
+/*Struktur Body kalkulator*/
 h1 {
   text-align: center;
 }
@@ -51,7 +76,7 @@ h1 {
   flex: 0 1 120px;
   font-weight: 600;
 }
-
+/*Penginputan data*/
 .calculator input {
   flex: 1;
   border: 1px solid #ccc;
@@ -93,7 +118,7 @@ h1 {
 .output #desc strong {
   text-transform: uppercase;
 }
-
+/*bar indikator Bmi*/
 .bmi-scale {
   display: flex;
 }
